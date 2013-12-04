@@ -1,0 +1,647 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{c96c307f-3fad-41e5-83c3-eed1c0bc24df}</ProjectGuid>
+    <RootNamespace>Win8Snes9x</RootNamespace>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <AppContainerApplication>true</AppContainerApplication>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <PackageCertificateKeyFile>Win8VBAM_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
+    <AppxPackageDir>C:\Users\Marcel\Desktop\Win8VBAM\</AppxPackageDir>
+    <PackageCertificateThumbprint>29EEC9EC99D96ED1FFBD4A87FBBFED9E331F6C70</PackageCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <IncludePath>.\VBAM\gb;.\VBAM\apu;.\VBAM\common;.\VBAM\gba;.\VBAM\zlib;.\VBAM;$(IncludePath)</IncludePath>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <IncludePath>.\VBAM\gb;.\VBAM\apu;.\VBAM\common;.\VBAM\gba;.\VBAM\zlib;.\VBAM;$(IncludePath)</IncludePath>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>.\VBAM\gb;.\VBAM\apu;.\VBAM\common;.\VBAM\gba;.\VBAM\zlib;.\VBAM;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>.\VBAM\gb;.\VBAM\apu;.\VBAM\common;.\VBAM\gba;.\VBAM\zlib;.\VBAM;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>.\VBAM\gb;.\VBAM\apu;.\VBAM\common;.\VBAM\gba;.\VBAM\zlib;.\VBAM;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>.\VBAM\gb;.\VBAM\apu;.\VBAM\common;.\VBAM\gba;.\VBAM\zlib;.\VBAM;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <Link>
+      <AdditionalDependencies>d2d1.lib;d3d11.lib;XInput.lib;dxgi.lib;ole32.lib;windowscodecs.lib;dwrite.lib;dxguid.lib;xaudio2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateWindowsMetadata>true</GenerateWindowsMetadata>
+    </Link>
+    <ClCompile>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)pch.pch</PrecompiledHeaderOutputFile>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(IntermediateOutputPath);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4453</DisableSpecificWarnings>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)'=='Release'">
+    <ClCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions);METRO_APP;__WIN32__;NO_ASM;NO_OGL;NO_OAL;NO_LINK;C_CORE;NO_PNG;_CRT_SECURE_NO_WARNINGS;DNO_DEFLATE;FINAL_VERSION;NO_DEFLATE</PreprocessorDefinitions>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">-fsigned-char %(AdditionalOptions)</AdditionalOptions>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">Neither</FavorSizeOrSpeed>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)'=='Debug'">
+    <ClCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions);METRO_APP;__WIN32__;C_CORE;NO_ASM;NO_OGL;NO_OAL;NO_LINK;NO_PNG;_CRT_SECURE_NO_WARNINGS;DNO_DEFLATE;FINAL_VERSION;NO_DEFLATE</PreprocessorDefinitions>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="AudioSettingsPane.xaml.h">
+      <DependentUpon>AudioSettingsPane.xaml</DependentUpon>
+    </ClInclude>
+    <ClInclude Include="CheatData.h" />
+    <ClInclude Include="CheatPane.xaml.h">
+      <DependentUpon>CheatPane.xaml</DependentUpon>
+    </ClInclude>
+    <ClInclude Include="Color.h" />
+    <ClInclude Include="ControllerInput.h" />
+    <ClInclude Include="CXBOXController.h" />
+    <ClInclude Include="Direct3DBase.h" />
+    <ClInclude Include="DirectXHelper.h" />
+    <ClInclude Include="DXSpriteBatch.h" />
+    <ClInclude Include="Emulator.h" />
+    <ClInclude Include="EmulatorFileHandler.h" />
+    <ClInclude Include="EmulatorInput.h" />
+    <ClInclude Include="EmulatorRenderer.h" />
+    <ClInclude Include="EmulatorSettings.h" />
+    <ClInclude Include="GameTime.h" />
+    <ClInclude Include="GeneralSettingsPane.xaml.h">
+      <DependentUpon>GeneralSettingsPane.xaml</DependentUpon>
+    </ClInclude>
+    <ClInclude Include="AboutSettingsPane.xaml.h">
+      <DependentUpon>AboutSettingsPane.xaml</DependentUpon>
+    </ClInclude>
+    <ClInclude Include="Input.h" />
+    <ClInclude Include="InputSettingsPane.xaml.h">
+      <DependentUpon>InputSettingsPane.xaml</DependentUpon>
+    </ClInclude>
+    <ClInclude Include="KeyboardInput.h" />
+    <ClInclude Include="OnFrameBuffer.h" />
+    <ClInclude Include="OnResizeBuffer.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="App.xaml.h">
+      <DependentUpon>App.xaml</DependentUpon>
+    </ClInclude>
+    <ClInclude Include="DirectXPage.xaml.h">
+      <DependentUpon>DirectXPage.xaml</DependentUpon>
+    </ClInclude>
+    <ClInclude Include="Point.h" />
+    <ClInclude Include="Rectangle.h" />
+    <ClInclude Include="SelectROMPane.xaml.h">
+      <DependentUpon>SelectROMPane.xaml</DependentUpon>
+    </ClInclude>
+    <ClInclude Include="SelectStatePane.xaml.h">
+      <DependentUpon>SelectStatePane.xaml</DependentUpon>
+    </ClInclude>
+    <ClInclude Include="Size.h" />
+    <ClInclude Include="SnappedPane.xaml.h">
+      <DependentUpon>SnappedPane.xaml</DependentUpon>
+    </ClInclude>
+    <ClInclude Include="stringhelper.h" />
+    <ClInclude Include="TextureLoader.h" />
+    <ClInclude Include="VBAM\apu\blargg_common.h" />
+    <ClInclude Include="VBAM\apu\blargg_config.h" />
+    <ClInclude Include="VBAM\apu\blargg_source.h" />
+    <ClInclude Include="VBAM\apu\Blip_Buffer.h" />
+    <ClInclude Include="VBAM\apu\Effects_Buffer.h" />
+    <ClInclude Include="VBAM\apu\Gb_Apu.h" />
+    <ClInclude Include="VBAM\apu\Gb_Oscs.h" />
+    <ClInclude Include="VBAM\apu\Multi_Buffer.h" />
+    <ClInclude Include="VBAM\common\Array.h" />
+    <ClInclude Include="VBAM\common\memgzio.h" />
+    <ClInclude Include="VBAM\common\Patch.h" />
+    <ClInclude Include="VBAM\common\Port.h" />
+    <ClInclude Include="VBAM\common\RingBuffer.h" />
+    <ClInclude Include="VBAM\common\SoundDriver.h" />
+    <ClInclude Include="VBAM\common\Types.h" />
+    <ClInclude Include="VBAM\common\XAudio2_Config.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="VBAM\gba\agbprint.h" />
+    <ClInclude Include="VBAM\gba\armdis.h" />
+    <ClInclude Include="VBAM\gba\bios.h" />
+    <ClInclude Include="VBAM\gba\Cheats.h" />
+    <ClInclude Include="VBAM\gba\CheatSearch.h" />
+    <ClInclude Include="VBAM\gba\EEprom.h" />
+    <ClInclude Include="VBAM\gba\elf.h" />
+    <ClInclude Include="VBAM\gba\Flash.h" />
+    <ClInclude Include="VBAM\gba\GBA.h" />
+    <ClInclude Include="VBAM\gba\GBAcpu.h" />
+    <ClInclude Include="VBAM\gba\gbafilter.h" />
+    <ClInclude Include="VBAM\gba\GBAGfx.h" />
+    <ClInclude Include="VBAM\gba\GBAinline.h" />
+    <ClInclude Include="VBAM\gba\GBALink.h" />
+    <ClInclude Include="VBAM\gba\GBASockClient.h" />
+    <ClInclude Include="VBAM\gba\Globals.h" />
+    <ClInclude Include="VBAM\gba\RTC.h" />
+    <ClInclude Include="VBAM\gba\Sound.h" />
+    <ClInclude Include="VBAM\gba\Sram.h" />
+    <ClInclude Include="VBAM\gb\gb.h" />
+    <ClInclude Include="VBAM\gb\gbCheats.h" />
+    <ClInclude Include="VBAM\gb\gbCodes.h" />
+    <ClInclude Include="VBAM\gb\gbCodesCB.h" />
+    <ClInclude Include="VBAM\gb\gbGlobals.h" />
+    <ClInclude Include="VBAM\gb\gbMemory.h" />
+    <ClInclude Include="VBAM\gb\gbPrinter.h" />
+    <ClInclude Include="VBAM\gb\gbSGB.h" />
+    <ClInclude Include="VBAM\gb\gbSound.h" />
+    <ClInclude Include="VBAM\NLS.h" />
+    <ClInclude Include="VBAM\System.h" />
+    <ClInclude Include="VBAM\Util.h" />
+    <ClInclude Include="VBAM\zlib\zconf.h" />
+    <ClInclude Include="VBAM\zlib\zlib.h" />
+    <ClInclude Include="Vector2.h" />
+    <ClInclude Include="Vector3.h" />
+    <ClInclude Include="Vector4.h" />
+    <ClInclude Include="VideoSettingsPane.xaml.h">
+      <DependentUpon>VideoSettingsPane.xaml</DependentUpon>
+    </ClInclude>
+    <ClInclude Include="VirtualControllerInput.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="AudioSettingsPane.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CheatPane.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Common\StandardStyles.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DirectXPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GeneralSettingsPane.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AboutSettingsPane.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="InputSettingsPane.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SelectROMPane.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SelectStatePane.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SnappedPane.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="VideoSettingsPane.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <None Include="Assets\arial24.spritefont">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </None>
+    <None Include="Assets\Pong.gb">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </None>
+    <None Include="SpriteBatch.hlsli" />
+    <None Include="Win8VBAM_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\Logo.scale-100.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\Logo2.scale-100.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\LogoGBA.scale-100.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\pad_buttons.dds" />
+    <Image Include="Assets\pad_buttons.png" />
+    <Image Include="Assets\pad_cross.dds" />
+    <Image Include="Assets\pad_l_button.dds" />
+    <Image Include="Assets\pad_r_button.dds" />
+    <Image Include="Assets\pad_start_select.dds" />
+    <Image Include="Assets\pad_start_select.png" />
+    <Image Include="Assets\SmallLogo.scale-100.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\SmallLogo2.scale-100.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\SmallLogoGBA.png" />
+    <Image Include="Assets\SmallLogoGBC.scale-100.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-100.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\SplashScreen2.scale-100.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\SplashScreenGBC.scale-100.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\SplashScreen.png" />
+    <Image Include="Assets\StoreLogo.scale-100.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\StoreLogo2.scale-100.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\StoreLogoGBA.png" />
+    <Image Include="Assets\StoreLogoGBC.scale-100.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\ThumbStick.dds" />
+    <Image Include="Assets\ThumbStick.png" />
+    <Image Include="Assets\ThumbStickCenter.dds" />
+    <Image Include="Assets\ThumbStickCenter.png" />
+    <Image Include="Assets\WideLogo.scale-100.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\WideLogo2.scale-100.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\WideLogoGBC.scale-100.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="App.xaml.cpp">
+      <DependentUpon>App.xaml</DependentUpon>
+    </ClCompile>
+    <ClCompile Include="AudioSettingsPane.xaml.cpp">
+      <DependentUpon>AudioSettingsPane.xaml</DependentUpon>
+    </ClCompile>
+    <ClCompile Include="CheatData.cpp" />
+    <ClCompile Include="CheatPane.xaml.cpp">
+      <DependentUpon>CheatPane.xaml</DependentUpon>
+    </ClCompile>
+    <ClCompile Include="ControllerInput.cpp" />
+    <ClCompile Include="CXBOXController.cpp" />
+    <ClCompile Include="Direct3DBase.cpp" />
+    <ClCompile Include="DirectXPage.xaml.cpp">
+      <DependentUpon>DirectXPage.xaml</DependentUpon>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">/bigobj %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="DXSpriteBatch.cpp" />
+    <ClCompile Include="Emulator.cpp">
+      <FunctionLevelLinking Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </FunctionLevelLinking>
+      <FunctionLevelLinking Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </FunctionLevelLinking>
+      <FunctionLevelLinking Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </FunctionLevelLinking>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">/bigobj %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="EmulatorFileHandler.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">/bigobj %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="EmulatorRenderer.cpp" />
+    <ClCompile Include="EmulatorSettings.cpp" />
+    <ClCompile Include="GameTime.cpp" />
+    <ClCompile Include="GeneralSettingsPane.xaml.cpp">
+      <DependentUpon>GeneralSettingsPane.xaml</DependentUpon>
+    </ClCompile>
+    <ClCompile Include="AboutSettingsPane.xaml.cpp">
+      <DependentUpon>AboutSettingsPane.xaml</DependentUpon>
+    </ClCompile>
+    <ClCompile Include="InputSettingsPane.xaml.cpp">
+      <DependentUpon>InputSettingsPane.xaml</DependentUpon>
+    </ClCompile>
+    <ClCompile Include="KeyboardInput.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Point.cpp" />
+    <ClCompile Include="Rectangle.cpp" />
+    <ClCompile Include="stringhelper.cpp" />
+    <ClCompile Include="TextureLoader.cpp" />
+    <ClCompile Include="vbaFunctions.cpp" />
+    <ClCompile Include="SelectROMPane.xaml.cpp">
+      <DependentUpon>SelectROMPane.xaml</DependentUpon>
+    </ClCompile>
+    <ClCompile Include="SelectStatePane.xaml.cpp">
+      <DependentUpon>SelectStatePane.xaml</DependentUpon>
+    </ClCompile>
+    <ClCompile Include="SnappedPane.xaml.cpp">
+      <DependentUpon>SnappedPane.xaml</DependentUpon>
+    </ClCompile>
+    <ClCompile Include="VBAM\apu\Blip_Buffer.cpp" />
+    <ClCompile Include="VBAM\apu\Effects_Buffer.cpp" />
+    <ClCompile Include="VBAM\apu\Gb_Apu.cpp" />
+    <ClCompile Include="VBAM\apu\Gb_Apu_State.cpp" />
+    <ClCompile Include="VBAM\apu\Gb_Oscs.cpp" />
+    <ClCompile Include="VBAM\apu\Multi_Buffer.cpp" />
+    <ClCompile Include="VBAM\common\memgzio.c">
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="VBAM\common\Patch.cpp" />
+    <ClCompile Include="VBAM\common\XAudio2.cpp" />
+    <ClCompile Include="VBAM\common\XAudio2_Config.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="VBAM\gba\agbprint.cpp" />
+    <ClCompile Include="VBAM\gba\armdis.cpp" />
+    <ClCompile Include="VBAM\gba\bios.cpp" />
+    <ClCompile Include="VBAM\gba\Cheats.cpp" />
+    <ClCompile Include="VBAM\gba\CheatSearch.cpp" />
+    <ClCompile Include="VBAM\gba\EEprom.cpp" />
+    <ClCompile Include="VBAM\gba\elf.cpp" />
+    <ClCompile Include="VBAM\gba\Flash.cpp" />
+    <ClCompile Include="VBAM\gba\GBA-arm.cpp" />
+    <ClCompile Include="VBAM\gba\GBA-thumb.cpp" />
+    <ClCompile Include="VBAM\gba\GBA.cpp" />
+    <ClCompile Include="VBAM\gba\gbafilter.cpp" />
+    <ClCompile Include="VBAM\gba\GBAGfx.cpp" />
+    <ClCompile Include="VBAM\gba\GBALink.cpp" />
+    <ClCompile Include="VBAM\gba\GBASockClient.cpp" />
+    <ClCompile Include="VBAM\gba\Globals.cpp" />
+    <ClCompile Include="VBAM\gba\Mode0.cpp" />
+    <ClCompile Include="VBAM\gba\Mode1.cpp" />
+    <ClCompile Include="VBAM\gba\Mode2.cpp" />
+    <ClCompile Include="VBAM\gba\Mode3.cpp" />
+    <ClCompile Include="VBAM\gba\Mode4.cpp" />
+    <ClCompile Include="VBAM\gba\Mode5.cpp" />
+    <ClCompile Include="VBAM\gba\remote.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="VBAM\gba\RTC.cpp" />
+    <ClCompile Include="VBAM\gba\Sound.cpp" />
+    <ClCompile Include="VBAM\gba\Sram.cpp" />
+    <ClCompile Include="VBAM\gb\GB.cpp" />
+    <ClCompile Include="VBAM\gb\gbCheats.cpp" />
+    <ClCompile Include="VBAM\gb\gbDis.cpp" />
+    <ClCompile Include="VBAM\gb\gbGfx.cpp" />
+    <ClCompile Include="VBAM\gb\gbGlobals.cpp" />
+    <ClCompile Include="VBAM\gb\gbMemory.cpp" />
+    <ClCompile Include="VBAM\gb\gbPrinter.cpp" />
+    <ClCompile Include="VBAM\gb\gbSGB.cpp" />
+    <ClCompile Include="VBAM\gb\gbSound.cpp" />
+    <ClCompile Include="VBAM\Util.cpp" />
+    <ClCompile Include="Vector2.cpp" />
+    <ClCompile Include="Vector3.cpp" />
+    <ClCompile Include="Vector4.cpp" />
+    <ClCompile Include="VideoSettingsPane.xaml.cpp">
+      <DependentUpon>VideoSettingsPane.xaml</DependentUpon>
+    </ClCompile>
+    <ClCompile Include="VirtualControllerInput.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Bunny Advance (Demo).gba">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </None>
+    <None Include="Assets\vba-over.ini">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="SpriteBatch_PS.hlsl">
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">SpriteBatch_PS</EntryPointName>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Pixel</ShaderType>
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">SpriteBatch_PS</EntryPointName>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">Pixel</ShaderType>
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">SpriteBatch_PS</EntryPointName>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4.0_level_9_1</ShaderModel>
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">SpriteBatch_PS</EntryPointName>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0_level_9_1</ShaderModel>
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">SpriteBatch_PS</EntryPointName>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4.0_level_9_1</ShaderModel>
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">SpriteBatch_PS</EntryPointName>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4.0_level_9_1</ShaderModel>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">SPRITEBATCH_PS</VariableName>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">SpriteBatch_PS.h</HeaderFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ObjectFileOutput>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">SPRITEBATCH_PS</VariableName>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">SpriteBatch_PS.h</HeaderFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+      </ObjectFileOutput>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">SPRITEBATCH_PS</VariableName>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">SpriteBatch_PS.h</HeaderFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ObjectFileOutput>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">SPRITEBATCH_PS</VariableName>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">SpriteBatch_PS.h</HeaderFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ObjectFileOutput>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">SPRITEBATCH_PS</VariableName>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">SpriteBatch_PS.h</HeaderFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </ObjectFileOutput>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">SPRITEBATCH_PS</VariableName>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|x64'">SpriteBatch_PS.h</HeaderFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </ObjectFileOutput>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">4.0_level_9_1</ShaderModel>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">4.0_level_9_1</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="SpriteBatch_VS.hlsl">
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">SpriteBatch_VS</EntryPointName>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Vertex</ShaderType>
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">SpriteBatch_VS</EntryPointName>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">Vertex</ShaderType>
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">SpriteBatch_VS</EntryPointName>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4.0_level_9_1</ShaderModel>
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">SpriteBatch_VS</EntryPointName>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0_level_9_1</ShaderModel>
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">SpriteBatch_VS</EntryPointName>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4.0_level_9_1</ShaderModel>
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">SpriteBatch_VS</EntryPointName>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4.0_level_9_1</ShaderModel>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">SPRITEBATCH_VS</VariableName>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">SpriteBatch_VS.h</HeaderFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ObjectFileOutput>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">SPRITEBATCH_VS</VariableName>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">SpriteBatch_VS.h</HeaderFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+      </ObjectFileOutput>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">SPRITEBATCH_VS</VariableName>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">SpriteBatch_VS.h</HeaderFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ObjectFileOutput>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">SPRITEBATCH_VS</VariableName>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">SpriteBatch_VS.h</HeaderFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ObjectFileOutput>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">SPRITEBATCH_VS</VariableName>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">SpriteBatch_VS.h</HeaderFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </ObjectFileOutput>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">SPRITEBATCH_VS</VariableName>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|x64'">SpriteBatch_VS.h</HeaderFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </ObjectFileOutput>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">4.0_level_9_1</ShaderModel>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">4.0_level_9_1</ShaderModel>
+    </FxCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
