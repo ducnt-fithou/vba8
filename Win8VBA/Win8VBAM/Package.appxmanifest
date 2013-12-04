@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
+  <Identity Name="34438m.k.VBA8" Publisher="CN=m.k" Version="1.10.0.0" />
+  <Properties>
+    <DisplayName>VBA8</DisplayName>
+    <PublisherDisplayName>m.k</PublisherDisplayName>
+    <Logo>Assets\StoreLogo2.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.2.1</OSMinVersion>
+    <OSMaxVersionTested>6.2.1</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="Win8Snes9x.App">
+      <VisualElements DisplayName="VBA8" Logo="Assets\Logo2.png" SmallLogo="Assets\SmallLogo2.png" Description="A Gameboy emulator for Windows 8 and Windows RT." ForegroundText="light" BackgroundColor="#4D3A89">
+        <DefaultTile ShowName="allLogos" WideLogo="Assets\WideLogo2.png" />
+        <SplashScreen Image="Assets\SplashScreen2.png" BackgroundColor="#4D3A89" />
+        <InitialRotationPreference>
+          <Rotation Preference="landscape" />
+          <Rotation Preference="landscapeFlipped" />
+        </InitialRotationPreference>
+      </VisualElements>
+    </Application>
+  </Applications>
+</Package>
